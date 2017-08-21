@@ -17,11 +17,8 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-
 var routes = require('./controllers/burgers_controller.js');
 app.use('/', routes);
 
-
-app.listen(process.env.PORT || 3000, function(err) {
-  console.log("Started listening on %s", app.url);
-});
+var port = process.env.PORT || 3000;
+app.listen(port);
