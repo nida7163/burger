@@ -4,10 +4,9 @@ var connection;
 if(process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else{
-    console.log('inside else connection');
     connection = mysql.createConnection({
-        root: 3306,
-        host: '127.0.0.1',
+        root: 3000,
+        host: 'localhost',
         user: 'root',
         password: '',
         database: 'burgers_db',
